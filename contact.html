@@ -1,0 +1,43 @@
+---
+title: Contact
+---
+<h1>Contato</h1>
+<p class="editable">Estre em contato ou faça perguntas sobre as receitas aqui.</p>
+
+<form method="post" action="{{ site.baseurl }}/contact-success/">
+		<input type="hidden" name="_to" value="{{ site.data.email }}" />
+		<input type="text" name="_gotcha" style="display: none;">
+
+	<div class="contain">
+		<div class="split">
+			<label for="first-name">Nome</label>
+			<input type="text" name="first-name" id="first-name" />
+		</div>
+		<div class="split">
+			<label for="surname">Sobrenome</label>
+			<input type="text" name="surname" id="surname" />
+		</div>
+	</div>
+
+	<div class="contain">
+		<div class="split">
+			<label for="email">Email</label>
+			<input type="email" name="email" id="email" required />
+		</div>
+
+		<div class="split">
+			<label for="subject">Assunto</label>
+			<select id="subject" name="subject">
+				<option value="enquiry">Enquiry</option>
+				<option value="suggestion">Suggestion</option>
+				<option value="press">Press</option>
+				<option value="other">Other</option>
+			</select>
+		</div>
+	</div>
+
+	<label for="message">Menssagem</label>
+	<textarea name="message" id="message"></textarea>
+
+	<input type="submit" value="Send Message" />
+</form>
